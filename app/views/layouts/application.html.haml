@@ -10,6 +10,7 @@
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = stylesheet_link_tag "application", :media => "all"
+
     %link(href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144")
     %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
     %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
@@ -28,9 +29,8 @@
           %a.brand(href="#") AccountingSystem
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Регистрация", new_user_registration_path
+              %li= link_to "Войти", new_user_session_path
 
     .container
 
@@ -46,9 +46,10 @@
                 %li= link_to "Link 1", "/path1"
                 %li= link_to "Link 2", "/path2"
                 %li= link_to "Link 3", "/path3"
-    
+
       %footer
-        %p &copy; Company 2012
+        %p &copy; #{ link_to "Devmen 2012", "http://devmen.com"}
+
     /
       Javascripts
       \==================================================
