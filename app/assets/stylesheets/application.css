@@ -11,3 +11,5 @@
  *= require_self
  *= require_tree .
  */
+
+li.sidebar-link h3 a{color: #333333;}
