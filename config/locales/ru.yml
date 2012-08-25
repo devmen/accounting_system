@@ -12,5 +12,6 @@ ru:
         email: "Email"
         password: "Пароль"
         password_confirmation: "Еще раз"
+        current_password: "Текущий пароль"
         remember_me: "Запомнить?"
 

@@ -46,10 +46,12 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'rails3-generators' #mainly for factory_girl & simple_form at this point
+  gem "rails3-generators", :git => "https://github.com/neocoin/rails3-generators.git"
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_girl'
+  gem 'factory_girl_rails', ">=3.0.0"
   gem 'capybara'
+  gem 'faker'
   #gem  'ZenTest', "~> 4.4.2"
   #gem  'autotest-rails' # if you're using rails
 end

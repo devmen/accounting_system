@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/neocoin/rails3-generators.git
+  revision: 6bdea11693e69917849dabc6bd38cf752e8ff194
+  specs:
+    rails3-generators (0.17.4)
+      railties (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -64,6 +71,8 @@ GEM
     factory_girl_rails (3.5.0)
       factory_girl (~> 3.5.0)
       railties (>= 3.0.0)
+    faker (1.0.1)
+      i18n (~> 0.4)
     ffi (1.1.1)
     growl (1.0.3)
     guard (1.0.3)
@@ -123,8 +132,6 @@ GEM
       activesupport (= 3.2.7)
       bundler (~> 1.0)
       railties (= 3.2.7)
-    rails3-generators (0.17.4)
-      railties (>= 3.0.0)
     railties (3.2.7)
       actionpack (= 3.2.7)
       activesupport (= 3.2.7)
@@ -201,7 +208,9 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   database_cleaner
   devise
-  factory_girl_rails
+  factory_girl
+  factory_girl_rails (>= 3.0.0)
+  faker
   growl
   guard (~> 1.0.0)
   guard-bundler
@@ -213,7 +222,7 @@ DEPENDENCIES
   jquery-rails
   pg
   rails (= 3.2.7)
-  rails3-generators
+  rails3-generators!
   rb-fsevent
   rspec-rails
   ruby_parser

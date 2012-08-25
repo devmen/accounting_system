@@ -4,12 +4,12 @@
   = f.error_notification
   .form-inputs
     = f.input :email, :required => true, :autofocus => true
-    = f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false
+    = f.input :password, :autocomplete => "off", :hint => "оставьте пустым если не хотите менять", :required => false
     = f.input :password_confirmation, :required => false
-    = f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true
+    = f.input :current_password, :hint => "нужно ввести Ваш текущий пароль", :required => true
   .form-actions
     = f.button :submit, "Редактировать"
 %h3 Удалить аккаунт
 %p
-   Не довольны? #{link_to "Удалить мой аккаунт!", registration_path(resource_name), :data => { :confirm => "Подтверждаете?" }, :method => :delete}.
+  Не довольны? #{link_to "Удалить мой аккаунт!", registration_path(resource_name), :data => { :confirm => "Подтверждаете?" }, :method => :delete}
 = link_to "<- Назад", :back

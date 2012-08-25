@@ -60,7 +60,7 @@ module AccountingSystem
     config.assets.version = '1.0'
 
     config.generators do |g|
-      g.test_framework :rspec, :views => false, :fixture => true
+      g.test_framework :rspec, :views => false, :fixture => true, :request_specs => true
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'
       #g.form_builder :simple_form
       g.template_engine :haml

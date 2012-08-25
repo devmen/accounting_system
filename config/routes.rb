@@ -1,5 +1,6 @@
 AccountingSystem::Application.routes.draw do
-  get "home/index"
+
+  resources :accounts
 
   devise_for :users
 

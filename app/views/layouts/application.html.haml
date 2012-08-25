@@ -26,11 +26,17 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") AccountingSystem
+          %a.brand(href="/") AccountingSystem
           .container.nav-collapse
-            %ul.nav
-              %li= link_to "Регистрация", new_user_registration_path
-              %li= link_to "Войти", new_user_session_path
+            %ul.nav.pull-right
+              - if current_user
+                %li= link_to "<i class=\"icon-edit\"></i>#{ current_user.email }".html_safe, edit_user_registration_path(:current)
+                %li= link_to "Выход", destroy_user_session_path, :method => :delete
+
+              - else
+                %li= link_to "Регистрация", new_user_registration_path
+                %li
+                  = link_to( "<i class=\"icon-user\"></i>Войти".html_safe, new_user_session_path )
 
     .container
 
@@ -38,14 +44,19 @@
         .row
           .span9
             = yield
-          .span3
-            .well.sidebar-nav
-              %h3 Sidebar
-              %ul.nav.nav-list
-                %li.nav-header Sidebar
-                %li= link_to "Link 1", "/path1"
-                %li= link_to "Link 2", "/path2"
-                %li= link_to "Link 3", "/path3"
+          - if signed_in?
+            .span3
+              .well.sidebar-nav
+                %ul.nav.nav-list
+                  %li.sidebar-link.head_link
+                    .add_btn.pull-right.sidebar-link_actions
+                      = link_to new_account_path, :class => 'btn btn-mini' do
+                        %i.icon-plus-sign
+                        = "Добавить"
+                    %h3= link_to "Счета", accounts_path
+                  %li= link_to "Link 1", "/path1"
+                  %li= link_to "Link 2", "/path2"
+                  %li= link_to "Link 3", "/path3"
 
       %footer
         %p &copy; #{ link_to "Devmen 2012", "http://devmen.com"}
