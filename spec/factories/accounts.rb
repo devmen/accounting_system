@@ -1,10 +1,10 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :payment do
+  factory :account do
     user
-    account_id 1
-    amount 1.5
-    description "MyText"
+    title Faker::Name.name
+    description Faker::Lorem.sentence
+    summa 1000
   end
 end

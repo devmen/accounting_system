@@ -13,3 +13,7 @@
  */
 
 li.sidebar-link h3 a{color: #333333;}
+
+input, textarea {
+    width: 410px;
+}

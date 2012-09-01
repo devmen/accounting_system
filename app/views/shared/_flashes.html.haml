@@ -1,0 +1,5 @@
+- flash.each do |type, message|
+  .alert.fide.in{:class=>twitterized_type(type), "data-dismiss"=>"alert"}
+    %button.alert{ :type=>"button", :class=>"close"  } ×
+    = message
+

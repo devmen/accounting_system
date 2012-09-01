@@ -19,6 +19,7 @@
 
 
   %body
+
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
@@ -43,6 +44,7 @@
       .content
         .row
           .span9
+            =render :partial => "shared/flashes", :locals => {:flash => flash}
             = yield
           - if signed_in?
             .span3
@@ -66,3 +68,6 @@
       \==================================================
     / Placed at the end of the document so the pages load faster
     = javascript_include_tag "application"
+
+    :javascript
+      $(".alert").alert()

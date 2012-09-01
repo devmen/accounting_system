@@ -2,7 +2,7 @@ require 'spec_helper'
 include Warden::Test::Helpers
 
 def create_logged_in_user
-  user = Factory.create(:user)
+  user = FactoryGirl.create(:user)
   login(user)
   user
 end

@@ -1,0 +1,13 @@
+ru:
+  accounts:
+
+
+
+
+  activerecord:
+    models:
+      account: "счет"
+    attributes:
+      account:
+        title: "Название"
+        description: "Описание"

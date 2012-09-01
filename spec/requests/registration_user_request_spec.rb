@@ -2,6 +2,8 @@
 require "spec_helper"
 
 describe "Registration" do
+  before(:each){logout(:user)}
+
   it "should have a form" do
     visit new_user_registration_path
     page.should have_selector('form')

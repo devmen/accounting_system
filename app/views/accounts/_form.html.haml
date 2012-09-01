@@ -1,0 +1,9 @@
+= simple_form_for @account do |f|
+  = f.error_notification
+  .form-inputs
+    = f.input :title, :hint => "Например: ВТБ24(рублевый)"
+    = f.input :description, :as => :text, :input_html =>{ :style => "width: 510px; height: 150px;" }, :hint => " Например: БИК: 7654321, ИНН: 9876543212345  "
+    = f.hint 'Здесь вы можете заполнить номер счета, информацию о банке, электронной валюте и т.п.'
+
+  .form-actions
+    = f.button :submit

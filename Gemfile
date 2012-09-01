@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.7'
+gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -52,6 +52,7 @@ group :test do
   gem 'factory_girl_rails', ">=3.0.0"
   gem 'capybara'
   gem 'faker'
+  gem 'shoulda-matchers'
   #gem  'ZenTest', "~> 4.4.2"
   #gem  'autotest-rails' # if you're using rails
 end
