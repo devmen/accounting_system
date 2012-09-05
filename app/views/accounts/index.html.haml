@@ -1,2 +1,29 @@
-%h1 Accounts#index
-%p Find me in app/views/accounts/index.html.haml
+%h1 Список счетов
+
+
+%table.table
+  %tr
+    %th #
+    %th Название
+    %th Остаток
+    %th Описание
+    %th Управление
+  - @accounts.each_with_index do |account, idx|
+    %tr
+      %td= idx+1
+      %td= link_to account.title, account_path(account)
+      %td= account.summa
+      %td= truncate account.description
+      %td
+        .dropdown
+          %button.btn.dropdown-toggle.btn-mini{ "data-toggle"=>"dropdown" }
+            Действие
+            %span.caret
+          %ul.dropdown-menu
+            %li= link_to "Перевод на счет"
+            %li= link_to "Перевод cо счета"
+            %li= link_to "Выписка"
+            %li.divider
+            %li= link_to "Редактировать", edit_account_path(account)
+
+

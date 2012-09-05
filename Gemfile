@@ -7,12 +7,14 @@ gem 'rails', '3.2.8'
 
 gem 'pg'
 gem 'devise'
-gem "twitter-bootstrap-rails"
+gem "twitter-bootstrap-rails", "2.1.3"
 # Gems used only for assets and not required
 # in production environments by default.
 gem "haml"
 gem "haml-rails"
 gem "russian"
+
+gem 'kaminari' #pagination
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

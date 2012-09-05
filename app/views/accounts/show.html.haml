@@ -1,0 +1,23 @@
+.row
+  %span.span5
+    %h3 Счет #{@account.title} [#{ link_to number_to_currency( @account.summa ), "#"}]
+  %span.span4
+    .pull-right
+      .dropdown
+        %button.btn.dropdown-toggle{ "data-toggle"=>"dropdown" }
+          Управление
+          %span.caret
+        %ul.dropdown-menu
+          %li= link_to "Перевод на счет"
+          %li= link_to "Перевод cо счета"
+          %li= link_to "Выписка"
+          %li.divider
+          %li= link_to "Редактировать", edit_account_path(@account)
+
+%br
+.initialism
+  %blockquote= simple_format(@account.description)
+
+
+#delete_button
+  = link_to "Удалить", account_path(@account), :method => :delete, :confirm => "Подтверждаете?", :class=>"btn btn-danger btn-mini"

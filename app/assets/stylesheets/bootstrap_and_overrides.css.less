@@ -1,7 +1,15 @@
 @import "twitter/bootstrap/bootstrap";
-body { 
+body {
 	padding-top: 60px;
 }
+
+.navbar-inner {
+    background-color: #1B1B1B;
+    background-image: -moz-linear-gradient(center top , #222222, #111111);
+    background-repeat: repeat-x;
+    border-color: #252525;
+}
+
 
 @import "twitter/bootstrap/responsive";
 
@@ -10,7 +18,7 @@ body {
 @iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
 
 // Set the Font Awesome (Font Awesome is default. You can disable by commenting below lines)
-// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not 
+// Note: If you use asset_path() here, your compiled boostrap_and_overrides.css will not
 //       have the proper paths. So for now we use the absolute path.
 @fontAwesomeEotPath: '/assets/fontawesome-webfont.eot';
 @fontAwesomeWoffPath: '/assets/fontawesome-webfont.woff';

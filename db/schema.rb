@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(:version => 20120828170011) do
     t.integer  "user_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "summa"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "summa",       :default => 0, :null => false
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
   end
 
   add_index "accounts", ["user_id"], :name => "index_accounts_on_user_id"

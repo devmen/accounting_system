@@ -1,6 +1,8 @@
 AccountingSystem::Application.routes.draw do
 
-  resources :accounts
+  resources :accounts do
+    resources :payments
+  end
 
   devise_for :users
 

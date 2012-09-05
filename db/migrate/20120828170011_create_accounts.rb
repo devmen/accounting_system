@@ -4,7 +4,7 @@ class CreateAccounts < ActiveRecord::Migration
       t.integer :user_id
       t.string  :title
       t.text    :description
-      t.integer :summa
+      t.integer :summa, :default => 0, :null => false
 
       t.timestamps
     end

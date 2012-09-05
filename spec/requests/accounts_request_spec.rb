@@ -40,15 +40,22 @@ describe "Manage account" do
       fill_in "account_title", :with => "test account"
       fill_in "account_description", :with => "test description"
 
-      click_button "Редактировать"
+      click_button "Сохранить"
 
-      should redirect_to(account_path(account))
+      current_path.should == account_path(account)
       @account = Account.find(account.id)
       @account.title.should eql("test account")
       @account.description.should eql("test description")
+      page.should have_content("test account")
+      page.should have_content("test description")
     end
 
-    it "should be deleted"
+    it "should be deleted" do
+      visit account_path(account.id)
+      click_on "Удалить"
+      current_path.should == accounts_path
+      page.should have_flash_notice("Счет удален")
+    end
 
   end
 
